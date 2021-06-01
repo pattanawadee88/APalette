@@ -16,7 +16,7 @@ function randomColorCode(){
         }   
     }
 }
-
+// myFunction 
 function myFunction(target){
     let codeColor = document.getElementById(target);
     codeColor.select();

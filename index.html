@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css -->
+    <link rel="stylesheet" href="main.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100&display=swap" rel="stylesheet">
+    
+    <!-- Google icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Color palatte</title>
+</head>
+<body>
+    <div class="container">
+        <div class="color-set-container"> 
+            <div class="color-set" id="color-set-1">
+                <div class="color-box" id="woody-1"></div>
+                <div class="color-box" id="woody-2"></div>
+                <div class="color-box" id="woody-3"></div>
+            </div>
+            <div class="color-set" id="color-set-2">
+                <div class="color-box" id="retro-1"></div> 
+                <div class="color-box" id="retro-2"></div> 
+                <div class="color-box" id="retro-3"></div>   
+            </div>
+            <div class="color-set" id="color-set-3">
+                <div class="color-box" id="black-orange-1"></div> 
+                <div class="color-box" id="black-orange-2"></div> 
+                <div class="color-box" id="black-orange-3"></div>
+            </div>
+            <div class="color-set" id="color-set-4">
+                <div class="color-box" id="pastel-1"></div> 
+                <div class="color-box" id="pastel-2"></div> 
+                <div class="color-box" id="pastel-3"></div> 
+            </div>
+            <div class="color-set" id="color-set-5">
+                <div class="color-box" id="pink-lemonad-1"></div> 
+                <div class="color-box" id="pink-lemonad-2"></div> 
+                <div class="color-box" id="pink-lemonad-3"></div>   
+            </div>
+            <div class="color-set" id="color-set-6">
+                <div class="color-box" id="sunset-1"></div> 
+                <div class="color-box" id="sunset-2"></div> 
+                <div class="color-box" id="sunset-3"></div> 
+            </div>
+            <!-- <div class="color-set">
+                <i class="material-icons add-icon">add_circle</i>
+            </div> -->
+        </div>
+        
+      
+        <div class="website-prototype">
+            <div class="window-container">
+                <div class="window-nav">
+                    <div class="three-dots">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        
+                    </div> 
+                </div>
+
+                <div class="welcome-text">
+                    <h1 class="upperText">no <br> more <br> wasting time <br> to <br> find the perfect colors</h1> 
+                    <p>It is okay if you don't like our palette because you can generate your own color palette.</p>
+                    <button id="generate-btn" onclick="randomColorCode()"><a class="upperText generate-btn-text" href="#">Let's generate</a></button> 
+                </div>
+
+                <div class="pantone-title">
+                    <h1>Pantone</h1>
+                </div>
+                
+                <div class="color-content">
+                    <div id="pantone-1" class="pantone">
+                        <textarea id="code-color-1" class="code-color upperText" onclick="myFunction('code-color-1')" >#1a1c20</textarea>
+                    </div>
+                    <div id="pantone-2" class="pantone">
+                        <textarea id="code-color-2" class="code-color upperText" onclick="myFunction('code-color-2')">#1a1c20</textarea>
+                    </div>
+                    <div id="pantone-3" class="pantone">
+                        <textarea id="code-color-3" class="code-color upperText" onclick="myFunction('code-color-3')">#1a1c20</textarea>
+                    </div>
+                    
+                </div>
+                
+                <div class="content"> 
+                    <div class="text-container">
+                        <i class="material-icons" style="color: black;">favorite</i>
+                        <h2>Color evokes feeling.</h2>
+                        <p>Choosing the right color for your website can make the website standout and interesting.
+                            But picking the right combination of colors could take so much time, that's why This Color Palette is what you needed.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="icon-content">
+                    <div class="icon-container">
+                        <i class="material-icons">cloud</i>
+                        <i class="material-icons">favorite</i>
+                        <i class="material-icons">traffic</i>
+                        <i class="material-icons">face</i>
+                        <i class="material-icons">shopping_cart</i>
+                        <i class="material-icons">stars</i>
+                        <i class="material-icons">emoji_emotions</i>
+                        <i class="material-icons">cake</i>
+                        <i class="material-icons">masks</i>  
+                        <i class="material-icons">keyboard</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Javascript Code -->
+    <script src="App.js"></script>
+ 
+</body>
+</html>

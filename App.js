@@ -16,8 +16,8 @@ function randomColorCode(){
         }   
     }
 }
-// myFunction 
-function myFunction(target){
+// copyColorCode
+function copyColorCode(target){
     let codeColor = document.getElementById(target);
     codeColor.select();
     codeColor.setSelectionRange(0, 99999);

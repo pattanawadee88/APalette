@@ -2,7 +2,48 @@
 const alphabet = [0,1,2,3,4,5,6,7,8,9,"A","B","C","D","E","F"];
 let arrOfColor=[];
 let stringOfColor ="";
+let body = document.body;
+let pantoneOne = document.querySelector('#pantone-1');
+let pantoneTwo = document.querySelector('#pantone-2');
+let pantoneThree = document.querySelector('#pantone-3');
+let btn = document.querySelector('.generate-btn-text')
+let colorCodeOne = document.querySelector('#code-color-1');
+let colorCodeTwo = document.querySelector('#code-color-2');
+let colorCodeThree = document.querySelector('#code-color-3');
+let iconBg = document.querySelector('.icon-container');
 
+let colorPalette = {
+    woody: {
+        backgroundColor: '#235952',
+        buttonColor: '#c81912',
+        secondBgColor: '#5B270B'
+    },
+    retro: {
+        backgroundColor: '#f1e7b6',
+        buttonColor: '#fe346e',
+        secondBgColor: '#00bdaa'
+    },
+    blackOrange: {
+        backgroundColor: '#1a1c20',
+        buttonColor: '#da9ff9',
+        secondBgColor: '#fc8621'
+    },
+    pastel: {
+        backgroundColor: '#cdc733',
+        buttonColor: '#f25287',
+        secondBgColor: '#9fd8df'
+    },
+    pinkLemonad: {
+        backgroundColor: '#EE91BC',
+        buttonColor: '#EFB960',
+        secondBgColor: '#A8DF65'
+    },
+    sunset: {
+        backgroundColor: '#eeaf61',
+        buttonColor: '#ee5d6c',
+        secondBgColor: '#6a0d83'
+    }
+};
 /* 
     A random color generator function
     > generate random number from 0-16 using Math.floor() and Math.random()
@@ -16,7 +57,7 @@ function randomColorCode(){
         }   
     }
 }
-// copyColorCode
+
 function copyColorCode(target){
     let codeColor = document.getElementById(target);
     codeColor.select();
@@ -25,67 +66,45 @@ function copyColorCode(target){
     alert("Copied the text: " + codeColor.innerHTML);
 
 }
+/*
+    A color change function takes 3 parameter 
+    > it changes background color of the body,3 pantones, and icon container.
+    > it changes color code text to match the color
+    > it also changes button text color
+*/
+function changeColor(bgColor,btnColor,secondBg){
+    body.style.backgroundColor = bgColor;
+    pantoneOne.style.backgroundColor = bgColor;
+    pantoneTwo.style.backgroundColor = secondBg;
+    pantoneThree.style.backgroundColor = btnColor;
+    
+    btn.style.color= btnColor;
 
+    colorCodeOne.textContent = bgColor;
+    colorCodeTwo.textContent = secondBg;
+    colorCodeThree.textContent = btnColor;
 
-function changeElementColor(mycolor){
-    let backgroundColor = mycolor.backgroundColor;
-    let buttonColor = mycolor.buttonColor;
-    let color = mycolor.color;
-
-    document.body.style.backgroundColor = backgroundColor;
-
-    document.querySelector('#pantone-1').style.backgroundColor = backgroundColor;
-    document.querySelector('#pantone-2').style.backgroundColor = buttonColor;
-    document.querySelector('#pantone-3').style.backgroundColor = color;
-
-    document.querySelector('.generate-btn-text').style.color = buttonColor;
-    // change textcontent of color code
-    document.querySelector('#code-color-1').textContent = backgroundColor;
-    document.querySelector('#code-color-2').textContent = buttonColor;
-    document.querySelector('#code-color-3').textContent = color;
-
-    document.querySelector('.icon-container').style.backgroundColor = color;
-
+    iconBg.style.backgroundColor = secondBg; 
 }
 
-let colorPalette = {
-    woody: {
-        backgroundColor: '#235952',
-        buttonColor: '#c81912',
-        color: '#5B270B'
-    },
-    retro: {
-        backgroundColor: '#f1e7b6',
-        buttonColor: '#fe346e',
-        color: '#00bdaa'
-    },
-    blackOrange: {
-        backgroundColor: '#1a1c20',
-        buttonColor: '#da9ff9',
-        color: '#fc8621'
-    },
-    pastel: {
-        backgroundColor: '#cdc733',
-        buttonColor: '#f25287',
-        color: '#9fd8df'
-    },
-    pinkLemonad: {
-        backgroundColor: '#EE91BC',
-        buttonColor: '#EFB960',
-        color: '#A8DF65'
-    },
-    sunset: {
-        backgroundColor: '#eeaf61',
-        buttonColor: '#ee5d6c',
-        color: '#6a0d83'
-    }
+//functions with ES6 destructuring assignment
+//for when a user click of those color provided palette 
+const woody = ({woody: {backgroundColor,buttonColor,secondBgColor}}) => {
+    changeColor(backgroundColor,buttonColor,secondBgColor);
+}
+const retro = ({retro: {backgroundColor,buttonColor,secondBgColor}}) => {
+    changeColor(backgroundColor,buttonColor,secondBgColor);
+}
+const blackOrange = ({blackOrange: {backgroundColor,buttonColor,secondBgColor}}) => {
+    changeColor(backgroundColor,buttonColor,secondBgColor);
+}
+const pastel = ({pastel: {backgroundColor,buttonColor,secondBgColor}}) => {
+    changeColor(backgroundColor,buttonColor,secondBgColor);
+}
+const pinkLemonad = ({pinkLemonad: {backgroundColor,buttonColor,secondBgColor}}) => {
+    changeColor(backgroundColor,buttonColor,secondBgColor);
+}
+const sunset = ({sunset: {backgroundColor,buttonColor,secondBgColor}}) => {
+    changeColor(backgroundColor,buttonColor,secondBgColor);
 }
 
-
-
-let woody = document.querySelector('#color-set-1').addEventListener('click', function () {changeElementColor(colorPalette.woody)});
-let retro = document.querySelector('#color-set-2').addEventListener('click', function() {changeElementColor(colorPalette.retro)});
-let blackOrange = document.querySelector('#color-set-3').addEventListener('click', function() {changeElementColor(colorPalette.blackOrange)});
-let pastel = document.querySelector('#color-set-4').addEventListener('click', function() {changeElementColor(colorPalette.pastel)});
-let pinkLemonad = document.querySelector('#color-set-5').addEventListener('click', function() {changeElementColor(colorPalette.pinkLemonad)});
-let sunset = document.querySelector('#color-set-6').addEventListener('click', function() {changeElementColor(colorPalette.sunset)});

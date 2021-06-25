@@ -51,21 +51,21 @@ let colorPalette = {
     > generate random number from 0-16 using Math.floor() and Math.random()
 
 */
-function randomColorCode(){
+function randomColorCode(id,gg){
     for(let i=0; i < 6; i++){
         arrOfColor[i]= alphabet[Math.floor(Math.random()*16)]; 
         stringOfColor = arrOfColor.join("");     
     } 
 
-    document.querySelector("#try-one").style.backgroundColor = `#`+ stringOfColor;
-    document.querySelector(".gen-color").textContent = `#`+stringOfColor;
+    document.getElementById(id).style.backgroundColor = `#`+ stringOfColor;
+    document.getElementById(gg).textContent = `#`+stringOfColor;
 };
 
 function overlayOn(){
-    document.getElementById("overlay").style.display = "block";
+    document.getElementById("gen-color-overlay").style.display = "block";
 }
 function off() {
-    document.getElementById("overlay").style.display = "none";
+    document.getElementById("gen-color-overlay").style.display = "none";
   }
 
 /*

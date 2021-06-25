@@ -68,11 +68,23 @@
                     </div> 
                 </div>
 
+                
                 <div class="welcome-text">
                     <h1 class="upperText">no <br> more <br> wasting time <br> to <br> find the perfect colors</h1> 
                     <p>It is okay if you don't like our palette because you can generate your own color palette.</p>
-                    <button id="generate-btn" onclick="randomColorCode()"><a class="upperText generate-btn-text" href="#">Let's generate</a></button> 
+                    <button id="generate-btn" onclick="overlayOn()"><a class="upperText generate-btn-text" href="#">Let's generate</a></button> 
+                    
                 </div>
+                <div id="overlay">
+                    <div class="try-con">
+                        <div class="try" id="try-one" onclick="randomColorCode()"><span class="gen-color"></span></div>
+                      
+                        <div class="try"></div>
+                        <div class="try"></div>
+                    </div>
+                    
+                </div>
+                
 
                 <div class="pantone-title">
                     <h1>Pantone</h1>

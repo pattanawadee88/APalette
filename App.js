@@ -12,6 +12,7 @@ let colorCodeTwo = document.querySelector('#code-color-2');
 let colorCodeThree = document.querySelector('#code-color-3');
 let iconBg = document.querySelector('.icon-container');
 
+// colorPalette object
 let colorPalette = {
     woody: {
         backgroundColor: '#235952',
@@ -44,20 +45,32 @@ let colorPalette = {
         secondBgColor: '#6a0d83'
     }
 };
+
 /* 
     A random color generator function
     > generate random number from 0-16 using Math.floor() and Math.random()
 
 */
 function randomColorCode(){
-    for (let j=0; j<3; j++){
-        for(let i=0; i < 6; i++){
-            arrOfColor[i]= alphabet[Math.floor(Math.random()*16)]; 
-            stringOfColor = arrOfColor.join("");
-        }   
-    }
-}
+    for(let i=0; i < 6; i++){
+        arrOfColor[i]= alphabet[Math.floor(Math.random()*16)]; 
+        stringOfColor = arrOfColor.join("");     
+    } 
 
+    document.querySelector("#try-one").style.backgroundColor = `#`+ stringOfColor;
+    document.querySelector(".gen-color").textContent = `#`+stringOfColor;
+};
+
+function overlayOn(){
+    document.getElementById("overlay").style.display = "block";
+}
+function off() {
+    document.getElementById("overlay").style.display = "none";
+  }
+
+/*
+    This is a copy color code function
+*/
 function copyColorCode(target){
     let codeColor = document.getElementById(target);
     codeColor.select();

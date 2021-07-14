@@ -100,6 +100,7 @@ function changeColor(bgColor,btnColor,secondBg){
     iconBg.style.backgroundColor = secondBg; 
 }
 
+
 //functions with ES6 destructuring assignment
 //for when a user click of those color provided palette 
 const woody = ({woody: {backgroundColor,buttonColor,secondBgColor}}) => {

@@ -64,10 +64,11 @@ function randomColorCode(id,gg){
 function overlayOn(){
     document.getElementById("gen-color-overlay").style.display = "block";
 }
-function off() {
-    document.getElementById("gen-color-overlay").style.display = "none";
-  }
 
+// an gen-color overlay will disappear after a closed icon have been clicked
+document.querySelector(".material-icons").addEventListener('click', function(){
+    document.getElementById("gen-color-overlay").style.display = "none";
+})
 /*
     This is a copy color code function
 */

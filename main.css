@@ -323,3 +323,8 @@ textarea{
     width: fit-content;
     color: white;
 }
+
+.material-icons{
+    margin-left: 0.4em;
+    margin-top: 0.5em;
+}

@@ -285,7 +285,7 @@ textarea{
 
 #gen-color-overlay{
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.233);
+    background-color:rgb(44, 42, 42);
     margin: auto;
     width: 80%; /* Full width (cover the whole page) */
     height: 80%;
@@ -303,7 +303,7 @@ textarea{
 .gen-color-box{
     width: 100%;
     height: 100%;
-    background-color: pink;
+    /* background-color: white; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -320,5 +320,5 @@ textarea{
 }
 .gen-color{
     width: fit-content;
-    border: 2px solid firebrick;
+    color: white;
 }

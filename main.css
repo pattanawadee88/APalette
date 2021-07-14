@@ -133,7 +133,7 @@ textarea{
 
 
 .welcome-text h1{
-    font-size: 3rem;
+    font-size: 4rem;
     margin: 1em 1.1em;
     font-family: 'Bungee Shade', cursive;
     /* writing-mode: vertical-rl;
@@ -249,7 +249,8 @@ textarea{
         height: 200px;
     }
 }
-@media only screen and (max-width: 550px){
+
+@media only screen and (max-width: 600px){
     .color-box,
     .dot{
         width: 20px;
@@ -273,7 +274,7 @@ textarea{
         margin-left: 1em;
     }
     .welcome-text h1{
-        font-size: 1.7rem;
+        margin: 0.2em;
     }
 }
 

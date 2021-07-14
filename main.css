@@ -286,6 +286,7 @@ textarea{
 #gen-color-overlay{
     position: fixed;
     background-color:rgb(44, 42, 42);
+    border-radius: 30px;
     margin: auto;
     width: 80%; /* Full width (cover the whole page) */
     height: 80%;
